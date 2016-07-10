@@ -1,0 +1,8 @@
+/.idea/
+/css/*
+!/css/sliderStyle.css
+/js/*
+!/js/slider.js
+/fonts/
+/img/
+index.html

@@ -1,0 +1,13 @@
+.clicked{
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.bodyclicked{
+    overflow: hidden;
+}
+
+.cpclicked{
+    display: none;
+}
