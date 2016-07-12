@@ -24,6 +24,7 @@ function Slider(images, settings){
     this.colorDelay = settings.colorDelay || null;
     this.pauseValue = settings.pause || 40;
     this.elem = settings.elem || document.body;
+    this.titleShow = settings.title || false;
 
     //internal initialization
     this.pause = 0;
@@ -72,11 +73,15 @@ function Slider(images, settings){
                          's;' + '-o-transition: color ' + this.colorDelay + 's linear ' + this.colorDelay / 2 +'s;transition: color ' +
                          this.colorDelay + 's linear ' + this.colorDelay / 2 +'s;</style>';
     }
+    this.titleText = this.doc.createElement("div");
     controlPanel.style.cssText = "width:" + getComputedStyle(this.elem).width + ";text-align:center;color:" +
                                  this.controlsColor + ";padding:15px;";
     controlPanel.setAttribute("id", "sliderControlPanel");
     controlPanel.insertAdjacentHTML("beforeEnd", controls);
     imgWrapper.appendChild(controlPanel);
+    controlPanel.insertBefore(this.titleText, controlPanel.firstElementChild);
+    this.titleText.classList.add("title");
+    if (this.titleShow) this.titleText.classList.add("titleshow");
     this.doc.head.insertAdjacentHTML("beforeEnd", controlsStyle);
     this.pauseButton = this.doc.querySelector("#sliderpause");
     this.sliderControlPanel = this.doc.querySelector("#sliderControlPanel");
@@ -128,6 +133,7 @@ Slider.prototype.imgShow = function(index){
     this.elem.setAttribute("alt", this.imgAlt[index]);
     this.elem.setAttribute("title", this.title[index]);
     this.href.setAttribute("href", this.imgLink[index]);
+    this.titleText.innerText = this.title[index];
 };
 
 Slider.prototype.stopRender = function(){

@@ -11,3 +11,14 @@
 .cpclicked{
     display: none;
 }
+
+.title{
+    width: inherit;
+    text-align: left;
+    display: none;
+    margin-bottom: 10px;
+}
+
+.titleshow{
+    display: block;
+}
