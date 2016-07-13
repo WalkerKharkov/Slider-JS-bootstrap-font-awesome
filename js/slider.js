@@ -118,6 +118,7 @@ Slider.prototype.imgClick = function(){
             this.elem.style.height = this.elemHeight;
             if (!this.pauseButton.classList.contains("pauseActive")) this.render(this.counter);
         } else {
+			this.elem.style.opacity = 1;/////////////////////////////////////
             this.elem.style.width = window.innerWidth + "px";
             this.elem.style.height = window.innerHeight + "px";
             this.stopRender();
