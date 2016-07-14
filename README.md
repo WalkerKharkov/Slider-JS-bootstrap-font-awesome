@@ -29,7 +29,7 @@ Object "images" contains data of images: name, alt, href attribute and title. It
         "1" : {
             "name" : "2.jpg",
             "alt" : "image 2",
-            "href" : "http://www.gogle.com",
+            "href" : "http://www.google.com",
             "title" : "google image"
         }
     };
