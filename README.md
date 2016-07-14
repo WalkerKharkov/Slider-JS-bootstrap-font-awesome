@@ -15,7 +15,7 @@ Slideshow can be configured by using the following settings:
     elem - contains DOM element that is the parent of the slider. default document.body
     title - contains information about show/hide the hint for images (boolean). default false
     
-Oblect "images" contains data of images: name, alt, href attribute and title. It's required argument.    
+Object "images" contains data of images: name, alt, href attribute and title. It's required argument.    
     
     Example of using:
     
